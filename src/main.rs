@@ -153,7 +153,7 @@ fn main() {
                             Explains how to download the Toolbox and shows how \
                              to use it to open a spec, view the pretty-printed \
                               version, and run TLC on it.",
-                          original_link: "http://lamport.azurewebsites.net/video/video3.html",
+                          original_link: "http://lamport.azurewebsites.net/video/video4.html",
                           markers: vec![Marker {
                                             name: "Prologue",
                                             timestamp: Duration::seconds(2),
