@@ -310,6 +310,7 @@ fn main() {
 
     for (i, video) in videos.iter().enumerate() {
         println!("===BEGIN COPY #{}: Original Name: {}===", i+1, video.name);
+        println!("TITLE COPY:\nLamport TLA+ Course Lecture {}: {}\n", i+1, video.name);
         println!("{}", DISCLAIMER);
         println!("Original Description: {}", video.description);
         println!("Original Link: {}", video.original_link);
