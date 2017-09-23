@@ -306,9 +306,71 @@ fn main() {
                 },
             ],
         },
+        Video {
+            name: "Paxos Commit Part 1: Preliminaries",
+            description: "A two-part lecture that introduces temporal formulas and explains what it means for one specification to implement another.",
+            original_link: "http://lamport.azurewebsites.net/video/video8a.html",
+            markers: vec![
+                Marker {
+                    name: "Prologue",
+                    timestamp: Duration::seconds(5),
+                },
+                Marker {
+                    name: "Implication",
+                    timestamp: Duration::seconds(37),
+                },
+                Marker {
+                    name: "Ordinary Expressions",
+                    timestamp: Duration::seconds(188),
+                },
+                Marker {
+                    name: "Temporal Formulas",
+                    timestamp: Duration::seconds(528),
+                },
+                Marker {
+                    name: "Theorems",
+                    timestamp: Duration::seconds(833),
+                },
+                Marker {
+                    name: "Epilogue",
+                    timestamp: Duration::seconds(931),
+                },
+            ],
+        },
+        Video {
+            name: "Paxos Commit Part 2: How it Works",
+            description: "A two-part lecture that introduces temporal formulas and explains what it means for one specification to implement another.",
+            original_link: "http://lamport.azurewebsites.net/video/video8b.html",
+            markers: vec![
+                Marker {
+                    name: "Prologue",
+                    timestamp: Duration::seconds(5),
+                },
+                Marker {
+                    name: "The Theorem",
+                    timestamp: Duration::seconds(48),
+                },
+                Marker {
+                    name: "Stuttering",
+                    timestamp: Duration::seconds(345),
+                },
+                Marker {
+                    name: "Termination and Stopping",
+                    timestamp: Duration::seconds(539),
+                },
+                Marker {
+                    name: "Epilogue",
+                    timestamp: Duration::seconds(713),
+                },
+            ],
+        },
     ];
 
-    for (i, video) in videos.iter().enumerate() {
+    for (mut i, video) in videos.iter().enumerate() {
+        // Hack, 8 was a double lecture video
+        if i > 7 {
+            i = i - 1;
+        }
         println!("===BEGIN COPY #{}: Original Name: {}===", i+1, video.name);
         println!("TITLE COPY:\nLamport TLA+ Course Lecture {}: {}\n", i+1, video.name);
         println!("{}", DISCLAIMER);
