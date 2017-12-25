@@ -258,6 +258,10 @@ fn main() {
                     timestamp: Duration::seconds(32),
                 },
                 Marker {
+                    name: "Weddings",
+                    timestamp: Duration::seconds(117),
+                },
+                Marker {
                     name: "The TLA+ Spec",
                     timestamp: Duration::seconds(270),
                 },
@@ -276,6 +280,10 @@ fn main() {
                 Marker {
                     name: "Correctness of Two-Phase Commit",
                     timestamp: Duration::seconds(1167),
+                },
+                Marker {
+                    name: "Correctness of Two-Phase Commit",
+                    timestamp: Duration::seconds(1248),
                 },
             ],
         },
@@ -364,11 +372,81 @@ fn main() {
                 },
             ],
         },
+        Video {
+            name: "The Alternating Bit Protocol Part 1: The High Level Specification",
+            description: "A two-part lecture that explains liveness, which describes what must happen, and fairness.",
+            original_link: "http://lamport.azurewebsites.net/video/video9a.html",
+            markers: vec![
+                Marker {
+                    name: "Prologue",
+                    timestamp: Duration::seconds(4),
+                },
+                Marker {
+                    name: "Finite Sequences",
+                    timestamp: Duration::seconds(44),
+                },
+                Marker {
+                    name: "What the Protocol Should Accomplish",
+                    timestamp: Duration::seconds(338),
+                },
+                Marker {
+                    name: "The High Level Spec",
+                    timestamp: Duration::seconds(472),
+                },
+                Marker {
+                    name: "Safety and Liveness",
+                    timestamp: Duration::seconds(680),
+                },
+                Marker {
+                    name: "Weak Fairness",
+                    timestamp: Duration::seconds(910),
+                },
+                Marker {
+                    name: "Adding Liveness to a Specification",
+                    timestamp: Duration::seconds(1060),
+                },
+                Marker {
+                    name: "Epilogue",
+                    timestamp: Duration::seconds(1215),
+                },
+            ],
+        },
+        Video {
+            name: "The Alternating Bit Protocol Part 2: The Protocol",
+            description: "A two-part lecture that explains liveness, which describes what must happen, and fairness.",
+            original_link: "http://lamport.azurewebsites.net/video/video9b.html",
+            markers: vec![
+                Marker {
+                    name: "Prologue",
+                    timestamp: Duration::seconds(4),
+                },
+                Marker {
+                    name: "The Safety Specification",
+                    timestamp: Duration::seconds(21),
+                },
+                Marker {
+                    name: "Checking Safety",
+                    timestamp: Duration::seconds(394),
+                },
+                Marker {
+                    name: "Liveness",
+                    timestamp: Duration::seconds(651),
+                },
+                Marker {
+                    name: "Epilogue",
+                    timestamp: Duration::seconds(1069),
+                },
+            ],
+        },
     ];
 
     for (mut i, video) in videos.iter().enumerate() {
         // Hack, 8 was a double lecture video
-        if i > 7 {
+        if i >= 8 {
+            i = i - 1;
+        }
+        // Hack, 9 was a double lecture video
+        if i >= 9 {
             i = i - 1;
         }
         println!("===BEGIN COPY #{}: Original Name: {}===", i+1, video.name);
