@@ -2,12 +2,15 @@ extern crate time;
 use time::Duration;
 
 const DISCLAIMER: &str = "
-IMPORTANT NOTE!: This is an UNOFFICIAL and UNSANCTIONED reupload of \
-the TLA+ lecture videos with some chapter markers in the video \
+See description for time markers.\n\n\
+
+IMPORTANT NOTE!: This is a mirror of \
+Lamport's TLA+ lecture videos with some chapter markers in the video \
 description on Lamport's site for ease of viewing on mobile devices, or \
 other platforms and connection setups where YouTube is the most optimal \
-\"format\". For the original files and original resources, please visit \
-http://lamport.azurewebsites.net/video/videos.html.
+\"format\". For the original files, resources, errata, and more, please visit \
+http://lamport.azurewebsites.net/video/videos.html or the original page which \
+is linked below.
 ";
 
 struct Video<'a> {
