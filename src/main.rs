@@ -441,6 +441,84 @@ fn main() {
                 },
             ],
         },
+        Video {
+            name: "Implementation with Refinement Part 1: Preliminaries",
+            description: "A two-part lecture that explains the general meaning of implementation, which involves refinement mappings.",
+            original_link: "http://lamport.azurewebsites.net/video/video10a.html",
+            markers: vec![
+                Marker {
+                    name: "Prologue",
+                    timestamp: Duration::seconds(4),
+                },
+                Marker {
+                    name: "Recursive Definitions",
+                    timestamp: Duration::seconds(44),
+                },
+                Marker {
+                    name: "Substitution",
+                    timestamp: Duration::seconds(224),
+                },
+                Marker {
+                    name: "The AB2 Protocol",
+                    timestamp: Duration::seconds(559),
+                },
+                Marker {
+                    name: "Checking AB2",
+                    timestamp: Duration::seconds(854),
+                },
+                Marker {
+                    name: "Liveness of AB2",
+                    timestamp: Duration::seconds(1003),
+                },
+                Marker {
+                    name: "Epilogue",
+                    timestamp: Duration::seconds(1160),
+                },
+            ],
+        },
+        Video {
+            name: "Implementation with Refinement Part 2: Refinement Mappings",
+            description: "A two-part lecture that explains the general meaning of implementation, which involves refinement mappings.",
+            original_link: "http://lamport.azurewebsites.net/video/video10b.html",
+            markers: vec![
+                Marker {
+                    name: "Prologue",
+                    timestamp: Duration::seconds(4),
+                },
+                Marker {
+                    name: "AB2 Implements AB",
+                    timestamp: Duration::seconds(30),
+                },
+                Marker {
+                    name: "Specifying SpecH",
+                    timestamp: Duration::seconds(262),
+                },
+                Marker {
+                    name: "Checking Implementation",
+                    timestamp: Duration::seconds(473),
+                },
+                Marker {
+                    name: "Simplifying Refinement",
+                    timestamp: Duration::seconds(552),
+                },
+                Marker {
+                    name: "What We Did And Why",
+                    timestamp: Duration::seconds(817),
+                },
+                Marker {
+                    name: "Imaginary Variables",
+                    timestamp: Duration::seconds(979),
+                },
+                Marker {
+                    name: "What's Next",
+                    timestamp: Duration::seconds(1169),
+                },
+                Marker {
+                    name: "Epilogue",
+                    timestamp: Duration::seconds(1237),
+                },
+            ],
+        },
     ];
 
     for (mut i, video) in videos.iter().enumerate() {
@@ -450,6 +528,11 @@ fn main() {
         }
         // Hack, 9 was a double lecture video
         if i >= 9 {
+            i = i - 1;
+        }
+
+        // Hack, 10 was a double lecture video
+        if i >= 10 {
             i = i - 1;
         }
         println!("===BEGIN COPY #{}: Original Name: {}===", i+1, video.name);
