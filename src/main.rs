@@ -555,14 +555,19 @@ fn main() {
         println!("{}", DISCLAIMER);
         println!("Original Description: {}", video.description);
         println!("Original Link: {}", video.original_link);
+        if let Some(corrections) = video.corrections {
+            println!("Corrections: {}", corrections);
+        }
         println!("\nContents\n");
+        
         let markers = &video.markers;
+        println!("0:00 - Intro");
         for marker in markers {
             println!(
-                "{} - {:02}:{:02}",
-                marker.name,
+                "{:02}:{:02} - {}",
                 marker.timestamp.num_minutes(),
-                marker.timestamp.num_seconds() - marker.timestamp.num_minutes() * 60
+                marker.timestamp.num_seconds() - marker.timestamp.num_minutes() * 60,
+                marker.name,
             );
         }
         println!("===END COPY: Original Name: {}===", video.name);
