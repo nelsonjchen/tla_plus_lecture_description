@@ -14,6 +14,7 @@ is linked below.
 struct Video<'a> {
     name: &'a str,
     description: &'a str,
+    corrections: Option<&'a str>,
     original_link: &'a str,
     markers: Vec<Marker<'a>>,
 }
@@ -30,6 +31,7 @@ fn main() {
             description: "Explains what TLA+ is and why you might want to use it.  \
                                         It introduces the concept of a state machine.",
             original_link: "http://lamport.azurewebsites.net/video/intro.html",
+            corrections: Some("http://lamport.azurewebsites.net/video/corrections.html#lecture1"),
             markers: vec![
                 Marker {
                     name: "Prologue",
@@ -74,6 +76,7 @@ fn main() {
             description: "Shows how a simple state machine is \
                            described in TLA+, giving the first glimpse of a TLA+ specification. ",
             original_link: "http://lamport.azurewebsites.net/video/smintla.html",
+            corrections: None,
             markers: vec![
                 Marker {
                     name: "Prologue",
@@ -112,6 +115,7 @@ fn main() {
                              to use it to open a spec, view the pretty-printed \
                               version, and run TLC on it.",
             original_link: "http://lamport.azurewebsites.net/video/video3.html",
+            corrections: Some("http://lamport.azurewebsites.net/video/corrections.html#lecture3"),
             markers: vec![
                 Marker {
                     name: "Prologue",
@@ -161,6 +165,7 @@ fn main() {
              On the way, you will start learning to write TLA+ specs and checking \
             them with the parser and with TLC.",
             original_link: "http://lamport.azurewebsites.net/video/video4.html",
+            corrections: Some("http://lamport.azurewebsites.net/video/corrections.html#lecture4"),
             markers: vec![
                 Marker {
                     name: "Prologue",
@@ -209,6 +214,7 @@ fn main() {
             description: "Commitment, in marriage and database transactions, \
             is specified.  You also learn how to use mathematical functions in specifications.",
             original_link: "http://lamport.azurewebsites.net/video/video5.html",
+            corrections: Some("http://lamport.azurewebsites.net/video/corrections.html#lecture5"),
             markers: vec![
                 Marker {
                     name: "Prologue",
@@ -249,6 +255,7 @@ fn main() {
             description: "How commitment is achieved, in marriage and database \
             transactions.  You also learn about records in TLA+ and some more about using TLC.",
             original_link: "http://lamport.azurewebsites.net/video/video6.html",
+            corrections: Some("http://lamport.azurewebsites.net/video/corrections.html#lecture6"),
             markers: vec![
                 Marker {
                     name: "Prologue",
@@ -289,13 +296,13 @@ fn main() {
             ],
         },
         Video {
-            name: "Paxos Commit
-",
+            name: "Paxos Commit",
             description: "Specifies a real fault-tolerant algorithm for \
             committing database transactions.  \
             It explains a few mathematical operations \
             for constructing and combining sets.",
             original_link: "http://lamport.azurewebsites.net/video/video7.html",
+            corrections: Some("http://lamport.azurewebsites.net/video/corrections.html#lecture7"),
             markers: vec![
                 Marker {
                     name: "The Algorithm",
@@ -319,6 +326,7 @@ fn main() {
             name: "Paxos Commit Part 1: Preliminaries",
             description: "A two-part lecture that introduces temporal formulas and explains what it means for one specification to implement another.",
             original_link: "http://lamport.azurewebsites.net/video/video8a.html",
+            corrections: Some("http://lamport.azurewebsites.net/video/corrections.html#lecture8-1"),
             markers: vec![
                 Marker {
                     name: "Prologue",
@@ -350,6 +358,7 @@ fn main() {
             name: "Paxos Commit Part 2: How it Works",
             description: "A two-part lecture that introduces temporal formulas and explains what it means for one specification to implement another.",
             original_link: "http://lamport.azurewebsites.net/video/video8b.html",
+            corrections: None,
             markers: vec![
                 Marker {
                     name: "Prologue",
@@ -377,6 +386,7 @@ fn main() {
             name: "The Alternating Bit Protocol Part 1: The High Level Specification",
             description: "A two-part lecture that explains liveness, which describes what must happen, and fairness.",
             original_link: "http://lamport.azurewebsites.net/video/video9a.html",
+            corrections: None,
             markers: vec![
                 Marker {
                     name: "Prologue",
@@ -416,6 +426,7 @@ fn main() {
             name: "The Alternating Bit Protocol Part 2: The Protocol",
             description: "A two-part lecture that explains liveness, which describes what must happen, and fairness.",
             original_link: "http://lamport.azurewebsites.net/video/video9b.html",
+            corrections: Some("http://lamport.azurewebsites.net/video/corrections.html#lecture9-2"),
             markers: vec![
                 Marker {
                     name: "Prologue",
@@ -443,6 +454,7 @@ fn main() {
             name: "Implementation with Refinement Part 1: Preliminaries",
             description: "A two-part lecture that explains the general meaning of implementation, which involves refinement mappings.",
             original_link: "http://lamport.azurewebsites.net/video/video10a.html",
+            corrections: Some("http://lamport.azurewebsites.net/video/corrections.html#lecture10-1"),
             markers: vec![
                 Marker {
                     name: "Prologue",
@@ -478,6 +490,7 @@ fn main() {
             name: "Implementation with Refinement Part 2: Refinement Mappings",
             description: "A two-part lecture that explains the general meaning of implementation, which involves refinement mappings.",
             original_link: "http://lamport.azurewebsites.net/video/video10b.html",
+            corrections: None,
             markers: vec![
                 Marker {
                     name: "Prologue",
