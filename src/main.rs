@@ -2,11 +2,9 @@ extern crate time;
 use time::Duration;
 
 const DISCLAIMER: &str = "
-See description for time markers.\n\n\
-
 IMPORTANT NOTE!: This is a mirror of \
 Lamport's TLA+ lecture videos with some chapter markers in the video \
-description on Lamport's site for ease of viewing on mobile devices, or \
+description from Lamport's site for ease of viewing on mobile devices, or \
 other platforms and connection setups where YouTube is the most optimal \
 \"format\". For the original files, resources, errata, and more, please visit \
 http://lamport.azurewebsites.net/video/videos.html or the original page which \
@@ -535,8 +533,12 @@ fn main() {
         if i >= 10 {
             i = i - 1;
         }
-        println!("===BEGIN COPY #{}: Original Name: {}===", i+1, video.name);
-        println!("TITLE COPY:\nLamport TLA+ Course Lecture {}: {} (HD)\n", i+1, video.name);
+        println!("===BEGIN COPY #{}: Original Name: {}===", i + 1, video.name);
+        println!(
+            "TITLE COPY:\nLamport TLA+ Course Lecture {}: {} (HD)\n",
+            i + 1,
+            video.name
+        );
         println!("{}", DISCLAIMER);
         println!("Original Description: {}", video.description);
         println!("Original Link: {}", video.original_link);
